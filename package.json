@@ -1,0 +1,24 @@
+{
+  "name": "grupo1_ticketazo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejandro-DeRosa/Grupo1_ticketazo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo/issues"
+  },
+  "homepage": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo#readme",
+  "devDependencies": {
+    "cypress": "^14.5.2"
+  }
+}
