@@ -1,3 +1,0 @@
-describe('prueba 1', () =>{
-    
-})
