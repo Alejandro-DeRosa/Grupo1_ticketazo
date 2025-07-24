@@ -84,14 +84,17 @@ npm run test:home
 ## 📁 Estructura del proyecto
 
 ```
-cypress/
-├── e2e/
-│   ├── login/
-│   ├── registro/
-│   ├── editar_contraseña/
-│   └── home/
-├── fixtures/
-├── support/
+GRUPO1_TICKETAZO/
+├── cypress/
+│   ├── downloads/
+│   ├── e2e/
+│   ├── fixtures/
+│   ├── screenshots/
+│   └── support/
+├── node_modules/
+├── .gitignore
 ├── cypress.config.js
+├── package-lock.json
+├── package.json
 └── README.md
 ```
