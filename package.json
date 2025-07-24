@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo#readme",
   "devDependencies": {
-    "cypress": "^14.5.2"
+    "cypress": "^14.5.2",
+    "cypress-xpath": "^2.0.1"
   }
 }

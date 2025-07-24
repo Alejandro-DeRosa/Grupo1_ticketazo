@@ -1,0 +1,18 @@
+{
+  "validUser": {
+    "email": "admin@admin.com",
+    "password": "admin"
+  },
+  "unregisteredUser": {
+    "email": "mailnoregistrado@mail.com",
+    "password": "Pass123"
+  },
+  "wrongPassword": {
+    "email": "admin@admin.com",
+    "password": "Pass123"
+  },
+  "invalidEmailFormat": {
+    "email": "admin.com",
+    "password": "admin"
+  }
+}
