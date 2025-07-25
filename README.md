@@ -4,11 +4,13 @@
 ## 🫂 Integrantes del Grupo 1
 
 ### Integrantes:
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
+- Cristina Leonor Algañaraz Rosado
+- Ignacio Echeverría
+- Jacob Villalba
+- Natalia Magalí Parrello
+- Samuel Contreras
+- Johana Bello
+- Alejandro De Rosa
 
 ---
  ## 🔗 Links importantes
@@ -70,7 +72,7 @@ npm run test:registro
 ### 🔒 Editar contraseña
 
 ```bash
-npm run test:editar-contrasena
+npm run test:editar-contraseña
 ```
 
 ### 🏠 Home
