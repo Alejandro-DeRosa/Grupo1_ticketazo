@@ -6,7 +6,7 @@ describe('Editar contraseña - Casos fallidos', () =>{
     
     // Carga las credenciales del usuario desde el fixture antes de ejecutar los tests
     before(() => {
-        cy.fixture('editarPasswordUsers.json').then(credenciales => {
+        cy.fixture('editarPasswordUser.json').then(credenciales => {
             userName = credenciales.alejandro.usuario;
             password = credenciales.alejandro.password;
             newPassword = credenciales.alejandro.newPassword;

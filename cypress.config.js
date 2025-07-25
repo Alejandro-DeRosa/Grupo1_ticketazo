@@ -10,7 +10,7 @@ module.exports = defineConfig({
       // actualiza contraseña de usuario "alejandro" en el archivo users.json
       on('task', {
         actualizarPassword() {
-          const filePath = path.resolve(__dirname, 'cypress/fixtures/editarPasswordUsers.json');
+          const filePath = path.resolve(__dirname, 'cypress/fixtures/editarPasswordUser.json');
           const users = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
           const temp = users.alejandro.password;
