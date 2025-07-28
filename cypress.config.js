@@ -5,5 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: 'https://vps-3696213-x.dattaweb.com'
   },
 });
