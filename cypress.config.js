@@ -23,5 +23,6 @@ module.exports = defineConfig({
       });
     return config;
     },
+    baseUrl: 'https://vps-3696213-x.dattaweb.com'
   },
 });
