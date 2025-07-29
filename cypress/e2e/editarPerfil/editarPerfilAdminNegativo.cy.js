@@ -4,7 +4,7 @@ describe('Edición de perfil en Ticketazo', () => {
     cy.login()
   })
 
-it('CP-EDP-001 - sin nombre', () => {
+it('CP-EPA-003 - Validar que no se pueda editar el perfil sin completar el campo "Nombre"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear()
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
@@ -21,7 +21,7 @@ it('CP-EDP-001 - sin nombre', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-002 - sin nombre de usuario', () => {
+it('CP-EPA-004 - Validar que no se pueda editar el perfil sin completar el campo "Nombre de usuario"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear()
@@ -38,7 +38,7 @@ it('CP-EDP-002 - sin nombre de usuario', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-003 - sin teléfono', () => {
+it('CP-EPA-005 - Validar que no se pueda editar el perfil sin completar el campo "Teléfono"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
@@ -55,7 +55,7 @@ it('CP-EDP-003 - sin teléfono', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-004 - sin LinkedIn', () => {
+it('CP-EPA-006 - Validar que no se pueda editar el perfil sin completar el campo "LinkedIn"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
@@ -72,7 +72,7 @@ it('CP-EDP-004 - sin LinkedIn', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-005 - sin Twitter', () => {
+it('CP-EPA-007 - Validar que no se pueda editar el perfil sin completar el campo "Twitter"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
@@ -89,7 +89,7 @@ it('CP-EDP-005 - sin Twitter', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-006 - sin Instagram', () => {
+it('CP-EPA-008 - Validar que no se pueda editar el perfil sin completar el campo "Instagram".', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
@@ -106,7 +106,7 @@ it('CP-EDP-006 - sin Instagram', () => {
     .and('contain', 'Hubo un problema al actualizar el perfil.')
 })
 
-it('CP-EDP-007 - sin TikTok', () => {
+it('CP-EPA-009 - Validar que no se pueda editar el perfil sin completar el campo "TikTok"', () => {
   cy.fixture('profile').then((data) => {
     cy.get('input[aria-label="Nombre"]').eq(0).clear().type(data.nombre)
     cy.get('input[aria-label="Nombre de usuario"]').clear().type(data.usuario)
