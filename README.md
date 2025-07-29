@@ -63,6 +63,12 @@ Cada comando ejecuta todos los archivos `*.cy.js` dentro de la carpeta correspon
 npm run test:cargar-evento
 ```
 
+### 🛒 Comprar Entradas
+
+```bash
+npm run test:comprar-entradas
+```
+
 ### 🔒 Editar Contraseña
 
 ```bash
@@ -104,8 +110,7 @@ GRUPO1_TICKETAZO/
 │   ├── e2e/
 │   ├── fixtures/
 │   ├── screenshots/
-│   ├── support/
-│   └── videos/
+│   └── support/
 ├── node_modules/
 ├── .gitignore
 ├── cypress.config.js
