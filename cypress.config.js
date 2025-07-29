@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = defineConfig({
-  screenshotOnRunFailure: true, 
+  screenshotOnRunFailure: true,
+  video: true,  
 
   e2e: {
     setupNodeEvents(on, config) {

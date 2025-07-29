@@ -6,9 +6,11 @@
   "scripts": {
     "test": "cypress run",
     "test:ui": "cypress open",
+    "test:cargar-evento": "cypress run --spec 'cypress/e2e/cargarEvento/**/*.cy.js'",
+    "test:editar-contrasena": "cypress run --spec 'cypress/e2e/editarContraseña/**/*.cy.js'",
+    "test:editar-perfil": "cypress run --spec 'cypress/e2e/editarPerfil/**/*.cy.js'",
     "test:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
-    "test:registro": "cypress run --spec 'cypress/e2e/registro/**/*.cy.js'",
-    "test:editar-contrasena": "cypress run --spec 'cypress/e2e/Editar_Contraseña/**/*.cy.js'",
+    "test:registrar-usuario": "cypress run --spec 'cypress/e2e/registerUser/**/*.cy.js'",
     "test:home": "cypress run --spec 'cypress/e2e/home/**/*.cy.js'"
   },
   "repository": {
@@ -24,7 +26,7 @@
   "type": "commonjs",
   "devDependencies": {
     "cypress": "^14.5.2",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^2.0.1"
   },
   "dependencies": {

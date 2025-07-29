@@ -57,22 +57,34 @@ npm run test:ui
 
 Cada comando ejecuta todos los archivos `*.cy.js` dentro de la carpeta correspondiente, incluyendo subcarpetas:
 
-### 🔐 Login
+### 🔄 Cargar Evento
+
+```bash
+npm run test:cargar-evento
+```
+
+### 🔒 Editar Contraseña
+
+```bash
+npm run test:editar-contrasena
+```
+
+### ✏️ Editar Perfil
+
+```bash
+npm run test:editar-perfil
+```
+
+### 👤 Login
 
 ```bash
 npm run test:login
 ```
 
-### 📝 Registro
+### 📝 Registrar Usuario
 
 ```bash
-npm run test:registro
-```
-
-### 🔒 Editar contraseña
-
-```bash
-npm run test:editar-contraseña
+npm run test:registrar-usuario
 ```
 
 ### 🏠 Home
@@ -92,7 +104,8 @@ GRUPO1_TICKETAZO/
 │   ├── e2e/
 │   ├── fixtures/
 │   ├── screenshots/
-│   └── support/
+│   ├── support/
+│   └── videos/
 ├── node_modules/
 ├── .gitignore
 ├── cypress.config.js
