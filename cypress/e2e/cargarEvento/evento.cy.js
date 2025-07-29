@@ -27,6 +27,7 @@ describe('Cargar evento', () => {
     })
 
     // Paso 3 - Lugar
+    cy.wait(1000)
     cy.get('[data-cy="select-lugar-evento"]').click({ force: true })
     cy.wait(1000)
     cy.get('[data-cy="option-lugar-7"]').click()
