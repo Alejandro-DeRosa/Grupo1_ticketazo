@@ -4,7 +4,7 @@ describe('Edición de perfil en Ticketazo', () => {
     cy.login()
   })
 
-  it('CP-EDP-001 - Rellena campos y guarda los cambios exitosamente', () => {
+  it('CP-EPA-001 - Edición de perfil exitosa', () => {
     cy.intercept('PUT', '**/api/backend/auth/actualizarCliente').as('actualizarPerfil')
 
     cy.fixture('profile').then((data) => {
@@ -23,7 +23,7 @@ describe('Edición de perfil en Ticketazo', () => {
     })
   })
 
-  it('CP-EDP-002 - Carga una imagen de perfil correctamente', () => {
+  it('CP-EPA-002 - Cargar imagen de perfil', () => {
     cy.intercept('PUT', '**/api/backend/auth/saveProfileImage').as('subidaImagen')
 
     cy.get('input[type="file"]').attachFile('perfil.jpeg')
