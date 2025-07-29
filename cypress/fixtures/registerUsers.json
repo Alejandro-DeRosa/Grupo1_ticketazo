@@ -1,0 +1,35 @@
+{
+    "names": {
+        "valid": "Jorge",
+        "withSpecialChars": "J@rge"
+    },
+    "surnames": {
+        "valid": "Diaz",
+        "withSpecialChars": "Di@z"
+    },
+    "phones": {
+        "valid": "2901445566",
+        "lessThan10": "2901",
+        "withSpecialChars": "phone%&"
+    },
+    "ids": {
+        "lessThan8": "48480",
+        "withSpecialChars": "id%&$dni"
+    },
+    "birthdate": {
+        "valid": "30121998",
+        "futureDate": "30122030",
+        "invalidNoAt": "carlostest.com"
+    },
+    "emails": {
+        "valid": "mail@mail.com",
+        "invalidNoAt": "mail.com"
+    },
+    "passwords": {
+        "valid": "Pw123***",
+        "anotherValid": "Pass123*",
+        "lessThan8": "Pw123*",
+        "moreThan8": "Pw123*****",
+        "invalidNoNumbersAndSpecialCharacters": "password"
+    }
+}

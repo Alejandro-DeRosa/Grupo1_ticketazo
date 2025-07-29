@@ -4,11 +4,13 @@
 ## 🫂 Integrantes del Grupo 1
 
 ### Integrantes:
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
-- xxxxxxx
+- Cristina Leonor Algañaraz Rosado
+- Ignacio Echeverría
+- Jacob Villalba
+- Natalia Magalí Parrello
+- Samuel Contreras
+- Johana Bello
+- Alejandro De Rosa
 
 ---
  ## 🔗 Links importantes
@@ -40,13 +42,13 @@ npm install
 ### Ejecutar **todos** los tests (modo headless)
 
 ```bash
-npx cypress run
+npm run test
 ```
 
 ### Ejecutar Cypress en modo interactivo (UI)
 
 ```bash
-npx cypress open
+npm run test:ui
 ```
 
 ---
@@ -58,25 +60,25 @@ Cada comando ejecuta todos los archivos `*.cy.js` dentro de la carpeta correspon
 ### 🔐 Login
 
 ```bash
-npx cypress run --spec "cypress/e2e/login/**/*.cy.js"
+npm run test:login
 ```
 
 ### 📝 Registro
 
 ```bash
-npx cypress run --spec "cypress/e2e/registro/**/*.cy.js"
+npm run test:registro
 ```
 
 ### 🔒 Editar contraseña
 
 ```bash
-npx cypress run --spec "cypress/e2e/editar_contraseña/**/*.cy.js"
+npm run test:editar-contraseña
 ```
 
 ### 🏠 Home
 
 ```bash
-npx cypress run --spec "cypress/e2e/home/**/*.cy.js"
+npm run test:home
 ```
 
 ---
@@ -84,14 +86,17 @@ npx cypress run --spec "cypress/e2e/home/**/*.cy.js"
 ## 📁 Estructura del proyecto
 
 ```
-cypress/
-├── e2e/
-│   ├── login/
-│   ├── registro/
-│   ├── editar_contraseña/
-│   └── home/
-├── fixtures/
-├── support/
+GRUPO1_TICKETAZO/
+├── cypress/
+│   ├── downloads/
+│   ├── e2e/
+│   ├── fixtures/
+│   ├── screenshots/
+│   └── support/
+├── node_modules/
+├── .gitignore
 ├── cypress.config.js
+├── package-lock.json
+├── package.json
 └── README.md
 ```
