@@ -14,4 +14,10 @@ Cypress.Commands.add('login', () => {
   cy.get('[data-cy="btn-login"]').click()
 })
 
+Cypress.Commands.add('loginEvento', () => {
+  cy.get('[data-cy="input-email"]').type('jhoanabello16+eventos@gmail.com')
+  cy.get('[data-cy="input-password"]').type('@Eventos1234')
+  cy.get('[data-cy="btn-login"]').click()
+})
+
 import 'cypress-file-upload'
