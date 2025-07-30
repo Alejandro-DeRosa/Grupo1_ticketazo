@@ -1,0 +1,247 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 0,
+    "pending": 0,
+    "failures": 7,
+    "start": "2025-07-29T23:15:43.824Z",
+    "end": "2025-07-29T23:17:01.199Z",
+    "duration": 77375,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "169e5922-35fc-42a4-8e0d-425d285095a9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home.spec.cy.js",
+      "file": "cypress\\e2e\\home.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+          "title": "HOME – Ticketazo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-HOME-01 | Header, logo y menú principal",
+              "fullTitle": "HOME – Ticketazo TC-HOME-01 | Header, logo y menú principal",
+              "timedOut": null,
+              "duration": 11217,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('nav').within(() => {\n  cy.get('img[alt=\"Ticketazo\"]').should('be.visible');\n  cy.contains('Mis entradas').should('exist');\n  cy.contains('Cargar Evento').should('exist');\n  cy.contains('Logout').should('exist');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `img[alt=\"Ticketazo\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `img[alt=\"Ticketazo\"]`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:22:37)\n    at withinFn (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:135880:8)\n    at <unknown> (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:135961:16)\n    at __WEBPACK_DEFAULT_EXPORT__ (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:133819:10)\n    at Context.within (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:135947:67)\n    at wrapped (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:141532:19)",
+                "diff": null
+              },
+              "uuid": "9ce0ecc3-7432-4f99-a121-aa9398279b68",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-02 | Buscador por texto funciona",
+              "fullTitle": "HOME – Ticketazo TC-HOME-02 | Buscador por texto funciona",
+              "timedOut": null,
+              "duration": 11311,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder*=\"Busca tu próxima\"]').as('search');\ncy.get('@search').clear().type('Test evento{enter}');\n// la URL debe incluir el query\ncy.url().should('include', 'search=Test%20evento');\n// las tarjetas resultantes contienen el texto\ncy.get('.event-card .event-title').each($t => cy.wrap($t).should('contain.text', 'Test evento'));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to include 'search=Test%20evento'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to include 'search=Test%20evento'\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:33:13)",
+                "diff": null
+              },
+              "uuid": "04507b5f-41b0-4876-8b1d-2a043da67350",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-03 | Filtro por Categoría",
+              "fullTitle": "HOME – Ticketazo TC-HOME-03 | Filtro por Categoría",
+              "timedOut": null,
+              "duration": 10905,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=\"categoria-filter\"]').as('cat');\ncy.get('@cat').click();\ncy.contains('.react-select__option', 'Concierto').click();\ncy.wait('@getEvents');\ncy.get('.event-card').each($card => {\n  cy.wrap($card).find('.event-category').should('contain.text', 'Concierto');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"categoria-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"categoria-filter\"]`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:40:7)",
+                "diff": null
+              },
+              "uuid": "a9cadddd-9f25-4219-ae8a-0d6699461f07",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-04 | Filtro por Fecha",
+              "fullTitle": "HOME – Ticketazo TC-HOME-04 | Filtro por Fecha",
+              "timedOut": null,
+              "duration": 10562,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"dd/mm/aaaa\"]').first().clear().type('01/06/2025');\ncy.get('input[placeholder=\"dd/mm/aaaa\"]').eq(1).clear().type('30/06/2025{enter}');\ncy.wait('@getEvents');\ncy.get('.event-card').should('have.length.at.least', 1);\n// opcional: validar que cada fecha esté en rango",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[placeholder=\"dd/mm/aaaa\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[placeholder=\"dd/mm/aaaa\"]`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:51:7)",
+                "diff": null
+              },
+              "uuid": "89897f8b-7bda-4d57-b122-15383b327c42",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-05 | Filtro por Provincia",
+              "fullTitle": "HOME – Ticketazo TC-HOME-05 | Filtro por Provincia",
+              "timedOut": null,
+              "duration": 10863,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=\"provincia-filter\"]').as('prov');\ncy.get('@prov').select('Córdoba');\ncy.wait('@getEvents');\ncy.get('.event-card').each($card => {\n  cy.wrap($card).find('.event-province').should('contain.text', 'Córdoba');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"provincia-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"provincia-filter\"]`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:61:7)",
+                "diff": null
+              },
+              "uuid": "3a848970-063b-4dc8-aaf0-3d8e78fca53d",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-06 | Limpiar filtros restaura estado inicial",
+              "fullTitle": "HOME – Ticketazo TC-HOME-06 | Limpiar filtros restaura estado inicial",
+              "timedOut": null,
+              "duration": 11126,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// aplica un filtro cualquiera\ncy.get('input[placeholder*=\"Busca tu próxima\"]').type('algo{enter}');\ncy.get('[data-cy=\"categoria-filter\"]').click();\ncy.contains('.react-select__option', 'Teatro').click();\ncy.wait('@getEvents');\n// limpia\ncy.contains('button', 'Limpiar filtros').click();\ncy.wait('@getEvents');\n// validaciones\ncy.get('input[placeholder*=\"Busca tu próxima\"]').should('have.value', '');\ncy.get('input[placeholder=\"dd/mm/aaaa\"]').each($i => {\n  cy.wrap($i).should('have.value', '');\n});\ncy.get('[data-cy=\"categoria-filter\"]').should('contain.text', 'Todas');\ncy.get('[data-cy=\"provincia-filter\"]').should('contain.text', 'Todas');\ncy.get('.event-card').should('have.length.greaterThan', 1);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"categoria-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-cy=\"categoria-filter\"]`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:73:7)",
+                "diff": null
+              },
+              "uuid": "a6b5df9e-fb60-441c-8e00-bc428d90b0a0",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-HOME-07 | Navegar a detalle y ver sección de compra y similares",
+              "fullTitle": "HOME – Ticketazo TC-HOME-07 | Navegar a detalle y ver sección de compra y similares",
+              "timedOut": null,
+              "duration": 10969,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.event-card').first().within(() => {\n  cy.contains('Ver evento').click();\n});\ncy.url().should('include', '/event/');\ncy.contains('button', /Comprar entrada/i).should('be.visible');\ncy.contains('Eventos similares').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.event-card`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.event-card`, but never found it.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:93:7)",
+                "diff": null
+              },
+              "uuid": "6fc691eb-a685-40ac-8048-3d6d49da475c",
+              "parentUUID": "01fd5ebf-21bf-4113-b527-d5759ed8c5c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9ce0ecc3-7432-4f99-a121-aa9398279b68",
+            "04507b5f-41b0-4876-8b1d-2a043da67350",
+            "a9cadddd-9f25-4219-ae8a-0d6699461f07",
+            "89897f8b-7bda-4d57-b122-15383b327c42",
+            "3a848970-063b-4dc8-aaf0-3d8e78fca53d",
+            "a6b5df9e-fb60-441c-8e00-bc428d90b0a0",
+            "6fc691eb-a685-40ac-8048-3d6d49da475c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 76953,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -3,22 +3,32 @@
   "version": "1.0.0",
   "description": "",
   "main": "cypress.config.js",
+  "type": "commonjs",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test:gui": "cypress open",
+    "test:log": "npm run cy:run 2>&1 | tee cypress-run.log"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alejandro-DeRosa/Grupo1_ticketazo.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo/issues"
   },
   "homepage": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.5.2"
+    "cypress": "^14.5.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^5.2.0"
   }
 }

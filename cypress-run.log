@@ -1,0 +1,199 @@
+
+> grupo1_ticketazo@1.0.0 cy:run
+> cypress run
+
+
+
+DevTools listening on ws://127.0.0.1:63163/devtools/browser/9b9042cb-ed1c-4f41-bb00-5056487b58b2
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.2                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v22.17.0 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          2 found (home.spec.cy.js, spec.cy.js)                                          │
+  │ Searched:       cypress/e2e/**/*.cy.js                                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  home.spec.cy.js                                                                 (1 of 2)
+
+
+  HOME – Ticketazo
+    1) TC-HOME-01 | Header y logo
+    2) TC-HOME-02 | Buscador por texto funciona
+    3) TC-HOME-03 | Filtrar por Categoría
+    4) TC-HOME-04 | Filtrar por Fecha
+    5) TC-HOME-05 | Filtrar por Provincia
+    6) TC-HOME-06 | Limpiar filtros
+    7) TC-HOME-07 | Detalle de evento y sección de compra
+
+
+  0 passing (1m)
+  7 failing
+
+  1) HOME – Ticketazo
+       TC-HOME-01 | Header y logo:
+     CypressError: `cy.within()` can only be called on a single element. Your subject contained 3 elements. Narrow down your subject to a single element (using `.first()`, for example) before calling `.within()`.
+
+To run `.within()` over multiple subjects, use `.each()`.
+
+  `cy.get('div').each($div => {`
+  `  cy.wrap($div).within(() => { ... })`
+  `})`
+
+https://on.cypress.io/within
+      at <unknown> (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:135954:72)
+      at __WEBPACK_DEFAULT_EXPORT__ (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:133819:10)
+      at Context.within (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:135947:67)
+      at wrapped (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:141532:19)
+      at <unknown> (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:147477:15)
+      at tryCatcher (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1546:18)
+      at Promise._settlePromiseCtx (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1583:10)
+      at _drainQueueStep (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:2381:12)
+      at _drainQueue (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:2370:9)
+      at Async._drainQueues (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:2386:5)
+      at Async.drainQueues (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:2256:14)
+
+  2) HOME – Ticketazo
+       TC-HOME-02 | Buscador por texto funciona:
+     AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to include 'search='
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:35:13)
+
+  3) HOME – Ticketazo
+       TC-HOME-03 | Filtrar por Categoría:
+     AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Categoría' within the selector: 'label' but never did.
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:42:7)
+
+  4) HOME – Ticketazo
+       TC-HOME-04 | Filtrar por Fecha:
+     AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[type="date"]`, but never found it.
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:60:7)
+
+  5) HOME – Ticketazo
+       TC-HOME-05 | Filtrar por Provincia:
+     AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Provincia' within the selector: 'label' but never did.
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:72:7)
+
+  6) HOME – Ticketazo
+       TC-HOME-06 | Limpiar filtros:
+     AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Categoría' within the selector: 'label' but never did.
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:87:7)
+
+  7) HOME – Ticketazo
+       TC-HOME-07 | Detalle de evento y sección de compra:
+     AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to match /\/event\/\d+/
+      at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:117:13)
+
+
+
+[mochawesome] Report JSON saved to C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\reports\mochawesome_016.json
+
+[mochawesome] Report HTML saved to C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\reports\mochawesome_016.html
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        7                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      7                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  7                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     1 minute, 8 seconds                                                              │
+  │ Spec Ran:     home.spec.cy.js                                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-01  Header y               
+      logo (failed).png                                                                             
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-02  Buscador               
+      por texto funciona (failed).png                                                               
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-03  Filtrar                
+     por Categoría (failed).png                                                                     
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-04  Filtrar                
+     por Fecha (failed).png                                                                         
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-05  Filtrar                
+     por Provincia (failed).png                                                                     
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-06  Limpiar                
+     filtros (failed).png                                                                           
+  -  C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticket     (1280x720)
+     azo\cypress\screenshots\home.spec.cy.js\HOME – Ticketazo -- TC-HOME-07  Detalle                
+     de evento y sección de compra (failed).png                                                     
+
+
+  (Video)
+
+  -  Video output: C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\videos\home.spec.cy.js.mp4
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  spec.cy.js                                                                      (2 of 2)
+
+
+  template spec
+    √ passes
+
+
+  1 passing (2s)
+
+[mochawesome] Report JSON saved to C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\reports\mochawesome_017.json
+
+[mochawesome] Report HTML saved to C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\reports\mochawesome_017.html
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     spec.cy.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Video output: C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress\videos\spec.cy.js.mp4
+
+An error was thrown in your plugins file while executing the handler for the after:run event.
+
+The error we received was:
+
+TypeError: merge is not a function
+    at Object.handler (C:\Users\sam77\Documents\Cursos y Manuales\QA\Automation\ticketazo\Grupo1_ticketazo\cypress.config.js:33:16)
+    at invoke (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:189:18)
+    at C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:59:14
+    at tryCatcher (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise.attempt.Promise.try (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\bluebird\js\release\method.js:39:29)
+    at Object.wrapChildPromise (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:58:23)
+    at RunPlugins.execute (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:168:21)
+    at EventEmitter.<anonymous> (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:56:12)
+    at EventEmitter.emit (node:events:518:28)
+    at process.<anonymous> (C:\Users\sam77\AppData\Local\Cypress\Cache\14.5.2\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:33:22)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)

@@ -1,0 +1,213 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-07-24T20:30:32.532Z",
+    "end": "2025-07-24T20:31:11.863Z",
+    "duration": 39331,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eca8f1db-9d97-411a-8226-877640ba886c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home.spec.cy.js",
+      "file": "cypress\\e2e\\home.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e22373f9-261d-48fe-a45c-31861ede400d",
+          "title": "Ticketazo - Módulo Home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-01 | Validación del header y logo",
+              "fullTitle": "Ticketazo - Módulo Home TC-01 | Validación del header y logo",
+              "timedOut": null,
+              "duration": 24192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('nav').should('be.visible');\ncy.contains('Mis entradas').should('exist');\ncy.get('img[alt=\"Ticketazo\"]').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Mis entradas' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Mis entradas' but never did.\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:25:32)",
+                "diff": null
+              },
+              "uuid": "5d0a52ea-b288-4c6f-95be-14a5539dbd11",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-02 | Verificación del buscador funcional",
+              "fullTitle": "Ticketazo - Módulo Home TC-02 | Verificación del buscador funcional",
+              "timedOut": null,
+              "duration": 11506,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Busca tu próxima función!\"]').should('exist').type('Test evento{enter}');\ncy.url().should('include', 'search=');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to include 'search='",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected 'https://vps-3696213-x.dattaweb.com/' to include 'search='\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:32:13)",
+                "diff": null
+              },
+              "uuid": "ac72df2b-bd81-4c03-b8c1-ed8f47577aab",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-03 | Verificación de filtros visibles",
+              "fullTitle": "Ticketazo - Módulo Home TC-03 | Verificación de filtros visibles",
+              "timedOut": null,
+              "duration": 472,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select').should('have.length.at.least', 1);",
+              "err": {},
+              "uuid": "66bfee40-5f63-48cb-8e28-d84a263e1c0b",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-04 | Visualización de tarjetas de eventos (genérico)",
+              "fullTitle": "Ticketazo - Módulo Home TC-04 | Visualización de tarjetas de eventos (genérico)",
+              "timedOut": null,
+              "duration": 637,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button').contains('Ver evento').should('exist');",
+              "err": {},
+              "uuid": "fbdfbecf-8d25-4421-803a-cbe432e5b20d",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-05 | Adquirir entrada desde la primer tarjeta",
+              "fullTitle": "Ticketazo - Módulo Home TC-05 | Adquirir entrada desde la primer tarjeta",
+              "timedOut": null,
+              "duration": 1208,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Ver evento').first().click();\ncy.url().then(url => {\n  if (url.includes('/auth/login')) {\n    cy.get('input[name=\"email\"]').type(credentials.email);\n    cy.get('input[name=\"password\"]').type(credentials.password);\n    cy.get('button[type=\"submit\"]').click();\n  }\n});\ncy.get('select[name=\"fecha\"], select').first().should('exist').select(1);\ncy.get('select[name=\"horario\"], select').eq(1).should('exist').select(1);\ncy.contains('Adquirir entrada').should('be.visible').click();\ncy.contains('¡Entrada adquirida con éxito!').should('exist').or(cy.contains('Mis entradas'));",
+              "err": {
+                "message": "TypeError: cy.contains(...).should(...).or is not a function",
+                "estack": "TypeError: cy.contains(...).should(...).or is not a function\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:60:7)\n    at runnable.fn (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:141799:19)\n    at callFn (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:160877:21)\n    at Runnable.run (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:160864:7)\n    at <unknown> (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:166957:30)\n    at PassThroughHandlerContext.finallyHandler (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://vps-3696213-x.dattaweb.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "55824104-09db-4a7e-909b-69ebbf474036",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-06 | Footer visible y con info legal/contacto",
+              "fullTitle": "Ticketazo - Módulo Home TC-06 | Footer visible y con info legal/contacto",
+              "timedOut": null,
+              "duration": 1010,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('footer').should('be.visible');\ncy.contains('Contacto').should('exist');\ncy.contains('Información Legal').should('exist');",
+              "err": {},
+              "uuid": "fb1de022-8b2c-4831-9375-5f676fac145b",
+              "parentUUID": "e22373f9-261d-48fe-a45c-31861ede400d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66bfee40-5f63-48cb-8e28-d84a263e1c0b",
+            "fbdfbecf-8d25-4421-803a-cbe432e5b20d",
+            "fb1de022-8b2c-4831-9375-5f676fac145b"
+          ],
+          "failures": [
+            "5d0a52ea-b288-4c6f-95be-14a5539dbd11",
+            "ac72df2b-bd81-4c03-b8c1-ed8f47577aab",
+            "55824104-09db-4a7e-909b-69ebbf474036"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39025,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

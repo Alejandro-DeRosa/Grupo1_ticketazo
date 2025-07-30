@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-23T23:27:20.864Z",
+    "end": "2025-07-23T23:27:39.960Z",
+    "duration": 19096,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bec6f8bc-2935-46c7-9f30-095b432f4313",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home.spec.cy.js",
+      "file": "cypress\\e2e\\home.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+          "title": "Ticketazo Home Page (con login real)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Verifica título y header",
+              "fullTitle": "Ticketazo Home Page (con login real) 1. Verifica título y header",
+              "timedOut": null,
+              "duration": 19053,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('nav').should('be.visible');\ncy.contains('Mis entradas').should('exist');\ncy.get('img[alt=\"Ticketazo\"]').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Ticketazo Home Page (con lo...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Ticketazo Home Page (con lo...`\n    at Context.eval (webpack://grupo1_ticketazo/./cypress/e2e/home.spec.cy.js:9:7)",
+                "diff": null
+              },
+              "uuid": "867d29c7-74c9-411a-bdcb-1f42f98b06f9",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. El buscador está presente y funciona",
+              "fullTitle": "Ticketazo Home Page (con login real) 2. El buscador está presente y funciona",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Busca tu próxima función\"]').should('be.visible').type('Test evento{enter}');\ncy.url().should('include', 'search=');",
+              "err": {},
+              "uuid": "af69a801-7666-4e75-840e-545eca71e0d4",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3. Los filtros cargan correctamente",
+              "fullTitle": "Ticketazo Home Page (con login real) 3. Los filtros cargan correctamente",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"dd/mm/aaaa\"]').should('exist');\ncy.get('select[aria-label=\"Categoría\"]').should('exist');\ncy.get('select[aria-label=\"Provincia\"]').should('exist');",
+              "err": {},
+              "uuid": "c75f86f3-0211-4be0-b78b-459922a6d4bb",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4. Los cards de evento muestran datos",
+              "fullTitle": "Ticketazo Home Page (con login real) 4. Los cards de evento muestran datos",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.event-card').should('have.length.greaterThan', 0).first().within(() => {\n  cy.get('img').should('be.visible');\n  cy.get('h3').invoke('text').should('not.be.empty');\n  cy.get('time').should('exist');\n  cy.contains('Ver evento').should('be.visible');\n});",
+              "err": {},
+              "uuid": "e0debf7b-66f7-4d1b-9508-809e0a958dbe",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5. Paginación funciona",
+              "fullTitle": "Ticketazo Home Page (con login real) 5. Paginación funciona",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.pagination').should('be.visible');\ncy.contains('.pagination a', '2').click();\ncy.url().should('include', 'page=2');",
+              "err": {},
+              "uuid": "c5b89529-543a-47d9-ac70-8e00a64fca50",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "6. Footer con Contacto e Información Legal",
+              "fullTitle": "Ticketazo Home Page (con login real) 6. Footer con Contacto e Información Legal",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('footer').within(() => {\n  cy.contains('Contacto').should('be.visible');\n  cy.contains('Información Legal').should('be.visible');\n});",
+              "err": {},
+              "uuid": "8f01bef1-0777-41ec-8151-fa8aef3f2893",
+              "parentUUID": "629d5edc-0bf5-4650-ba8f-e89f6317ccce",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "867d29c7-74c9-411a-bdcb-1f42f98b06f9"
+          ],
+          "pending": [],
+          "skipped": [
+            "af69a801-7666-4e75-840e-545eca71e0d4",
+            "c75f86f3-0211-4be0-b78b-459922a6d4bb",
+            "e0debf7b-66f7-4d1b-9508-809e0a958dbe",
+            "c5b89529-543a-47d9-ac70-8e00a64fca50",
+            "8f01bef1-0777-41ec-8151-fa8aef3f2893"
+          ],
+          "duration": 19053,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
