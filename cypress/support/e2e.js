@@ -14,6 +14,5 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
 import './formularios'
-import './personlaCommands'
+import './personalCommands'

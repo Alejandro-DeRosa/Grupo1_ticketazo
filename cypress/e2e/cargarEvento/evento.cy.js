@@ -8,7 +8,8 @@ describe('Cargar evento', () => {
   it('CP-EVENTO-001 - Cargar función completa', () => {
     // Paso 1 - Datos básicos
     cy.get('[data-cy="input-titulo"]').type('Test')
-    cy.get('[data-type="day"]').eq(0).click().type('30')
+    cy.get('[aria-label="día, "]').click().type('20')
+    cy.get('[aria-label="mes, "]').click().type('08')
     cy.get('[data-type="hour"]').eq(0).click().type('12')
     cy.get('[data-type="minute"]').eq(0).click().type('12')
     cy.wait(1000)

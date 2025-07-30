@@ -7,12 +7,11 @@
     "test": "cypress run",
     "test:ui": "cypress open",
     "test:cargar-evento": "cypress run --spec 'cypress/e2e/cargarEvento/**/*.cy.js'",
-    "test:comprar-entradas": "cypress run --spec 'cypress/e2e/comprarEntrdas/**/*.cy.js'",
-    "test:editar-contrasena": "cypress run --spec 'cypress/e2e/editarContraseña/**/*.cy.js'",
+    "test:comprar-entradas": "cypress run --spec 'cypress/e2e/Comprar_entradas/**/*.cy.js'",
+    "test:editar-contraseña": "cypress run --spec 'cypress/e2e/editarContraseña/**/*.cy.js'",
     "test:editar-perfil": "cypress run --spec 'cypress/e2e/editarPerfil/**/*.cy.js'",
     "test:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
-    "test:registrar-usuario": "cypress run --spec 'cypress/e2e/registerUser/**/*.cy.js'",
-    "test:home": "cypress run --spec 'cypress/e2e/home/**/*.cy.js'"
+    "test:registrar-usuario": "cypress run --spec 'cypress/e2e/registerUser/**/*.cy.js'"
   },
   "repository": {
     "type": "git",

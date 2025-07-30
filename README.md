@@ -72,7 +72,7 @@ npm run test:comprar-entradas
 ### 🔒 Editar Contraseña
 
 ```bash
-npm run test:editar-contrasena
+npm run test:editar-contraseña
 ```
 
 ### ✏️ Editar Perfil
@@ -93,12 +93,6 @@ npm run test:login
 npm run test:registrar-usuario
 ```
 
-### 🏠 Home
-
-```bash
-npm run test:home
-```
-
 ---
 
 ## 📁 Estructura del proyecto
@@ -110,7 +104,8 @@ GRUPO1_TICKETAZO/
 │   ├── e2e/
 │   ├── fixtures/
 │   ├── screenshots/
-│   └── support/
+│   ├── support/
+│   └── videos/
 ├── node_modules/
 ├── .gitignore
 ├── cypress.config.js
