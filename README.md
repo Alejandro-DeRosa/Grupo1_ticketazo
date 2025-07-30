@@ -81,6 +81,12 @@ npm run test:editar-contraseña
 npm run test:editar-perfil
 ```
 
+### 🏠 Home
+
+```bash
+npm run test:home
+```
+
 ### 👤 Login
 
 ```bash
