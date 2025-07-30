@@ -32,7 +32,7 @@ describe('Editar contraseña - Casos exitosos', () =>{
         cy.url().should('eq', 'https://vps-3696213-x.dattaweb.com/userProfile');
         cy.get('[data-cy="btn-editar-password"]').click();
         cy.get('[data-cy="input-password-actual"]').type(password);
-        cy.get('[data-cy="input-password-nueva"]').type(newPassword);
+        cy.get('[data-cy="input-password-nueva"]').type(newPassword);      
         cy.get('[data-cy="btn-guardar-password"]').click();
 
         cy.verificarAlert('Contraseña actualizada correctamente');
