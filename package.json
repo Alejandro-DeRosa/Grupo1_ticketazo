@@ -1,24 +1,35 @@
 {
   "name": "grupo1_ticketazo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto de pruebas automatizadas con Cypress para el grupo 1 - Ticketazo",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:ui": "cypress open",
+    "test:cargar-evento": "cypress run --spec 'cypress/e2e/cargarEvento/**/*.cy.js'",
+    "test:comprar-entradas": "cypress run --spec 'cypress/e2e/Comprar_entradas/**/*.cy.js'",
+    "test:editar-contraseña": "cypress run --spec 'cypress/e2e/editarContraseña/**/*.cy.js'",
+    "test:editar-perfil": "cypress run --spec 'cypress/e2e/editarPerfil/**/*.cy.js'",
+    "test:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
+    "test:registrar-usuario": "cypress run --spec 'cypress/e2e/registerUser/**/*.cy.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alejandro-DeRosa/Grupo1_ticketazo.git"
+    "url": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo/issues"
+    "url": "https://trello.com/b/688169322314236178e8b999/grupo-1-ticketazo"
   },
   "homepage": "https://github.com/Alejandro-DeRosa/Grupo1_ticketazo#readme",
+  "author": "Grupo 1 - QA",
+  "license": "ISC",
+  "type": "commonjs",
   "devDependencies": {
-    "cypress": "^14.5.2"
+    "cypress": "^14.5.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0"
   }
 }
